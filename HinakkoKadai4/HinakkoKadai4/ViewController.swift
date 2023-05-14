@@ -9,17 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet private weak var countLabel: UILabel!
     
-    var countNumber = 0
+    private var countNumber = 0
 
-    @IBAction func CountButton(_ sender: UIButton) {
+    @IBAction private func CountButton(_ sender: UIButton) {
 
         countNumber += 1
         countLabel.text = String("\(countNumber)")
     }
 
-    @IBAction func ClearButton(_ sender: UIButton) {
+    @IBAction private func ClearButton(_ sender: UIButton) {
         countNumber = 0
         countLabel.text = String("\(countNumber)")
     }
